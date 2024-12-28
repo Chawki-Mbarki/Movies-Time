@@ -36,10 +36,12 @@ const App = () => {
           type="text"
           placeholder="Search movies..."
           value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <img
           src={SearchIcon}
           alt="Search"
+          onClick={() => searchMovies(searchTerm)}
         />
       </div>
       {movies.length > 0
